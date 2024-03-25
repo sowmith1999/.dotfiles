@@ -1,0 +1,6 @@
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/sowmith1999/init.lua
+[submodule "personal"]
+	path = personal
+	url = https://github.com/sowmith1999/.dotfiles-personal.git
