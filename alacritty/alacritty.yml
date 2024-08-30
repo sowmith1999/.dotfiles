@@ -2,7 +2,9 @@ window:
   padding:
     x: 10
     y: 10
-  decorations: Full 
+  decorations: "None"
+ # decorations: Full 
+
   opacity: 0.99
   startup_mode: Windowed
   title: Terminal
