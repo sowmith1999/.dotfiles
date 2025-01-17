@@ -1,0 +1,88 @@
+[[colors.indexed_colors]]
+color = "0xff8f40"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xe6b673"
+index = 17
+
+[[colors.indexed_colors]]
+color = "0x131721"
+index = 18
+
+[[colors.indexed_colors]]
+color = "0x272d38"
+index = 19
+
+[[colors.indexed_colors]]
+color = "0xbfbdb6"
+index = 20
+
+[[colors.indexed_colors]]
+color = "0xe6e1cf"
+index = 21
+
+[colors.bright]
+black = "0x3e4b59"
+blue = "0x59c2ff"
+cyan = "0x95e6cb"
+green = "0xb8cc52"
+magenta = "0xd2a6ff"
+red = "0xf07178"
+white = "0xf3f4f5"
+yellow = "0xffb454"
+
+[colors.cursor]
+cursor = "0xe6e1cf"
+text = "0x0f1419"
+
+[colors.normal]
+black = "0x0f1419"
+blue = "0x59c2ff"
+cyan = "0x95e6cb"
+green = "0xb8cc52"
+magenta = "0xd2a6ff"
+red = "0xf07178"
+white = "0xe6e1cf"
+yellow = "0xffb454"
+
+[colors.primary]
+background = "0x0f1419"
+foreground = "0xe6e1cf"
+
+[cursor.style]
+blinking = "On"
+
+[font]
+size = 10.0
+
+[font.bold]
+family = "IosevkaNerdFontMono-Bold"
+style = "Bold"
+
+[font.italic]
+family = "IosevkaNerdFontMono-Italic"
+style = "Italic"
+
+[font.normal]
+family = "IosevkaNerdFontMono-Regular"
+style = "Regular"
+
+[scrolling]
+history = 50000
+multiplier = 3
+
+[terminal.shell]
+args = ["--login"]
+program = "/usr/bin/zsh"
+
+[window]
+decorations = "None"
+dynamic_title = true
+opacity = 1 
+startup_mode = "Windowed"
+title = "Terminal"
+
+[window.padding]
+x = 10
+y = 10
