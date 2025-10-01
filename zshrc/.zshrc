@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -111,8 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source <(fzf --zsh)
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# source <(fzf --zsh)
 # fzf --tmux center         # Center, 50% width and height
 # fzf --tmux 80%            # Center, 80% width and height
 # fzf --tmux 100%,50%       # Center, 100% width and 50% height
@@ -122,10 +122,10 @@ source <(fzf --zsh)
 # fzf --tmux bottom,80%,40% # Bottom, 80% height, 40% height
 alias ll='ls -lah'
 alias tn='tmux new -As'
-setxkbmap -option caps:escape
-
+alias "wacomn"='xsetwacom list devices | grep "Wacom Intuos S Pen stylus" | grep -o "[0-9]*" | awk "{print $2}" | xargs -I {} xsetwacom set {} MapToOutput next'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="$HOME/.local/nvim/bin:$PATH$"
 export PATH="$HOME/.local/zig-linux-x86_64-0.13.0:$PATH"
 export PATH="$HOME/projects/emsdk/upstream/bin/:$PATH"
 export PATH="$HOME/projects/Odin:$PATH"
@@ -137,11 +137,25 @@ export PATH="/usr/local/souffle:$PATH"
 export PATH="/usr/local/souffle/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
 source $HOME/.cargo/env
-export PATH="/usr/local/cuda-12.6/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda-12.6/lib64:$LD_LIBRARY_PATH"
-export PATH="/home/sowmithk/Downloads/clion-2024.3.1.1/bin:$PATH"
-# xsetwacom list devices | grep "Wacom Intuos S Pen stylus" | awk '{print $7}' | xargs -I {} xsetwacom set {} MapToOutput next
+export PATH="$HOME/.local/cuda-12.6/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/cuda-12.6/lib64:$LD_LIBRARY_PATH"
+# export PATH="$HOME/intel/oneapi/tbb/2022.0/
+export PATH="$HOME/.local/oneTBB_v2022.1.0/include:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/oneTBB_v2022.1.0/lib:$LD_LIBRARY_PATH"
+export PATH="$HOME/.local/cmake-4.0.2-linux-x86_64/bin:$PATH"
+# export PATH="$HOME/.local/llvm20-assert/bin:$PATH"
+# export LD_LIBRARY_PATH="$HOME/.local/llvm20-assert/lib:$LD_LIBRARY_PATH"
+export PATH="$HOME/.local/zig_0.14.1/:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/zig_0.14.1/lib:$LD_LIBRARY_PATH"
+# export LD_LIBRARY_PATH="$HOME/.local/cuda-12.6/lib64:$LD_LIBRARY_PATH"
+# export PATH="/home/sowmithk/Downloads/clion-2024.3.1.1/bin:$PATH"
 . "$HOME/.cargo/env"
 eval "$(zoxide init zsh)"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/nvim/bin:$PATH$"
+eval "$(direnv hook zsh)"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$PATH:/home/sowmithk/.modular/bin"
