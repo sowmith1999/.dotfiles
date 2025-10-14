@@ -122,10 +122,11 @@ source $ZSH/oh-my-zsh.sh
 # fzf --tmux bottom,80%,40% # Bottom, 80% height, 40% height
 alias ll='ls -lah'
 alias tn='tmux new -As'
+alias wifi-ls='sudo wpa_cli list_networks'
 alias "wacomn"='xsetwacom list devices | grep "Wacom Intuos S Pen stylus" | grep -o "[0-9]*" | awk "{print $2}" | xargs -I {} xsetwacom set {} MapToOutput next'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="$HOME/.local/nvim/bin:$PATH$"
+export PATH="$HOME/.local/nvim/bin:$PATH"
 export PATH="$HOME/.local/zig-linux-x86_64-0.13.0:$PATH"
 export PATH="$HOME/projects/emsdk/upstream/bin/:$PATH"
 export PATH="$HOME/projects/Odin:$PATH"
@@ -136,20 +137,21 @@ export PATH="/bin/usr/racket/bin:$PATH"
 export PATH="/usr/local/souffle:$PATH"
 export PATH="/usr/local/souffle/bin:$PATH"
 export PATH="/usr/local/go/bin:$PATH"
-source $HOME/.cargo/env
-export PATH="$HOME/.local/cuda-12.6/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/.local/cuda-12.6/lib64:$LD_LIBRARY_PATH"
+# source $HOME/.cargo/env
+export PATH="$HOME/.local/cuda-12.9/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/cuda-12.9/lib64:$LD_LIBRARY_PATH"
 # export PATH="$HOME/intel/oneapi/tbb/2022.0/
-export PATH="$HOME/.local/oneTBB_v2022.1.0/include:$PATH"
-export LD_LIBRARY_PATH="$HOME/.local/oneTBB_v2022.1.0/lib:$LD_LIBRARY_PATH"
-export PATH="$HOME/.local/cmake-4.0.2-linux-x86_64/bin:$PATH"
+export PATH="$HOME/.local/onetbb-22.2/include:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/onetbb-22.2/lib:$LD_LIBRARY_PATH"
+export PATH="$HOME/.dotfiles/scripts/:$PATH"
+# export PATH="$HOME/.local/cmake-4.0.2-linux-x86_64/bin:$PATH"
 # export PATH="$HOME/.local/llvm20-assert/bin:$PATH"
 # export LD_LIBRARY_PATH="$HOME/.local/llvm20-assert/lib:$LD_LIBRARY_PATH"
 export PATH="$HOME/.local/zig_0.14.1/:$PATH"
 export LD_LIBRARY_PATH="$HOME/.local/zig_0.14.1/lib:$LD_LIBRARY_PATH"
 # export LD_LIBRARY_PATH="$HOME/.local/cuda-12.6/lib64:$LD_LIBRARY_PATH"
 # export PATH="/home/sowmithk/Downloads/clion-2024.3.1.1/bin:$PATH"
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 
@@ -158,4 +160,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$PATH:/home/sowmithk/.modular/bin"
+export PATH="$HOME/.modular/bin:$PATH"
+source /usr/share/nvm/init-nvm.sh
