@@ -123,6 +123,7 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -lah'
 alias tn='tmux new -As'
 alias wifi-ls='sudo wpa_cli list_networks'
+alias wifi-scan='sudo iw dev wlan0 scan'
 alias "wacomn"='xsetwacom list devices | grep "Wacom Intuos S Pen stylus" | grep -o "[0-9]*" | awk "{print $2}" | xargs -I {} xsetwacom set {} MapToOutput next'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
